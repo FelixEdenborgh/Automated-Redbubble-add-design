@@ -18,8 +18,8 @@ driver = webdriver.Chrome(PATH)
 driver.get("https://www.redbubble.com/")
 
 # Info
-username = "Iron59"
-password = "n14LOMU8ffwF"
+username = ""
+password = ""
 print(driver.title)
 
 # picture from directory
