@@ -18,8 +18,8 @@ driver = webdriver.Chrome(PATH)
 driver.get("https://www.redbubble.com/")
 
 # Info
-username = ""
-password = ""
+username = "Iron59"
+password = "n14LOMU8ffwF"
 print(driver.title)
 
 # picture from directory
@@ -142,9 +142,10 @@ while(play == True):
     # behöver lägga till något system som läser upp från en map och sedan tar första i mapen och lägger in, efter den är klar med att spara allt till sidan så tar den bort den bilden från mapen.
     # Lägger till en bild
     search = driver.find_element_by_xpath('/html/body/div[1]/div[5]/div[2]/form/div/div[1]/div[1]/input').send_keys(os.getcwd() + file_path +picture)
+    time.sleep(25)
 
     if os.path.isfile(file_path + picture) == True:
-        os.remove(picture)
+        os.remove(file_path + picture)
     else:
         picture = os.listdir(file_path)[number] + 1
 
@@ -228,7 +229,7 @@ while(play == True):
 
     # Go back to start page
     time.sleep(5)
-    search = driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div/div/div/header/div[2]/a/svg').click()
+    driver.get("https://www.redbubble.com/explore/for-you/")
 
     try:
         # Random popup
